@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Jetpack Library App"
+rootProject.name = "Jet Attendance App"
 include(":app")

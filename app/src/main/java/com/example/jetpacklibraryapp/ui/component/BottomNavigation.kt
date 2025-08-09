@@ -1,14 +1,11 @@
 package com.example.jetpacklibraryapp.ui.component
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -19,11 +16,14 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.jetpacklibraryapp.R
 import com.example.jetpacklibraryapp.ui.navigation.NavigationItem
 import com.example.jetpacklibraryapp.ui.navigation.Screen
 
@@ -45,16 +45,16 @@ fun BottomNavigation(
                 screen = Screen.Home,
             ),
             NavigationItem(
-                title = "Favorite",
-                defaultIcon = Icons.Outlined.FavoriteBorder,
-                selectedIcon = Icons.Default.Favorite,
-                screen = Screen.Favorite,
+                title = "Attendances",
+                defaultIcon = ImageVector.vectorResource(R.drawable.outlined_attendance_icon),
+                selectedIcon = ImageVector.vectorResource(R.drawable.baseline_attendance_icon),
+                screen = Screen.Attendances,
             ),
             NavigationItem(
-                title = "History",
-                defaultIcon = Icons.Outlined.Refresh,
-                selectedIcon = Icons.Default.Refresh,
-                screen = Screen.History,
+                title = "Leave",
+                defaultIcon = ImageVector.vectorResource(R.drawable.outlined_leave_icon),
+                selectedIcon = ImageVector.vectorResource(R.drawable.baseline_leave_icon),
+                screen = Screen.Leave,
             ),
             NavigationItem(
                 title = "Profile",

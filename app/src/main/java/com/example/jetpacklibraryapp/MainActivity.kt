@@ -26,7 +26,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackLibraryApp()
+            JetpackLibraryAppTheme {
+                JetpackLibraryApp()
+            }
         }
     }
 }
@@ -50,10 +52,10 @@ fun JetpackLibraryApp(
             composable(Screen.Home.route) {
                 HomeScreen()
             }
-            composable(Screen.Favorite.route) {
+            composable(Screen.Attendances.route) {
                 FavoriteScreen()
             }
-            composable(Screen.History.route) {
+            composable(Screen.Leave.route) {
                 HistoryScreen()
             }
             composable(Screen.Profile.route) {
